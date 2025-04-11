@@ -11,3 +11,7 @@ const agenda =[
     {id_agenda: 10,nome_profissional:"Alan Jeon", horario: "21:00"},
 
 ]
+
+export const Agenda = function(){
+    return agenda;
+}

@@ -11,3 +11,7 @@ const usuarios =[
     {id: 10,nome:"Alan Jeon", id_grupo: 10},
 
 ]
+
+export const Usuarios = function(){
+    return usuarios;
+}
