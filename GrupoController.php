@@ -6,16 +6,19 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-use App\Models\Servico;
+use App\Models\Grupo;
 
-class ServicoController extends BaseController
+class GrupoController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function getservicos(){
+    public function getgrupo(){
 
-        $servico = Servico::all();
+        $grupos = Grupo::all();
 
-    return response()->json($servico);
+
+       
+
+    return response()->json($grupos);
 }
 }

@@ -19,10 +19,10 @@ class Agendamento extends Authenticatable
 
     protected $fillable = [
         "id_agendamento",
+        "id_usuaio",
+        "id_servico",
+        "id_agenda",
         "data",
-        "hora",
-        "nome_cliente",
-        "nome_profissional",
     ];
 
     public function usuario()

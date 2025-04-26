@@ -8,23 +8,25 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Servico extends Authenticatable
+class Agenda extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = 'servico';
+    protected $table = 'agenda';
  
-    protected $primaryKey = 'id_servico';
+    protected $primaryKey = 'id_agenda';
 
 
     protected $fillable = [
-        "nome_servico",
-        "valor",
+        "id_agenda",
+        "id_usuario",
+        "dia_da_semana",
+        "horario",
     ];
 
     public function usuario()
     {
-        return $this->hasMany(User::class,'id_servico', 'id_servico');
+        return $this->hasMany(User::class,'id_agenda', 'id_agenda');
     }
 
 }
